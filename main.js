@@ -21,9 +21,9 @@ contentInput.addEventListener('input', function() { // Add an input event listen
 });
 divStyleCheckbox.addEventListener('change', function() { // Add a change event listener to the input element
     if (divStyleCheckbox.checked) { // Check if the checkbox is checked
-        emptyDiv.classList.add('border-rounded');
+        emptyDiv.classList.add('border-rounded-05');
         emptyDiv.style.backgroundColor = colorInput.value; // Set the background color of the div element to the value of the input element
     } else { // If the checkbox is not checked
-        emptyDiv.classList.remove('border-rounded');
+        emptyDiv.classList.remove('border-rounded-05');
     }
 });

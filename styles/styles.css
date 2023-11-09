@@ -6,7 +6,9 @@ body {
     font-size: 62.5%;
   }
 main {
-  width: clamp(20rem, 80vw, 120rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0 auto;
 }
 *,
@@ -14,21 +16,24 @@ main {
 *::before {
     box-sizing: border-box;
 }
+
 .container {
   width: 50%;
   background: #EFEFEF;
   padding: 2rem;
 }
-
+.vertical-align {
+  align-items: center;
+}
 .form-container label {
   display: block;
 }
 .border-color {
-  border-color: black;
+  border: .01rem solid black;
 }
   
 .textfield {
-  border: 0.1rem solid #c1c0c0;
+  border: .1rem solid #c1c0c0;
 }
   
 .checkbox {
@@ -36,27 +41,35 @@ main {
 }
   
 .button {
-  padding: .5rem 1rem;
+  background-color: hsl(261, 24%, 84%);
+  font-size: .7rem;
+  padding: .3rem 1.8rem;
   /* background-color: #ddd; */
   cursor: pointer;
 }
-.border-rounded {
+.border-rounded-05 {
   border-radius: 0.5rem;
+}
+.border-rounded-03 {
+  border-radius: 0.3rem;
 }
 .button:hover {
   background-color: #ccc;
 }
   
 .empty-div {
-  border: 1px dashed #000;
+  border: .01rem solid #000;
   padding: .5rem;
   text-align: center;
   color: #666;
   margin-block-start: 1rem;
 }
 h1 {
+  width: 100%;
+  font-size: 2rem;
   text-align: center;
   color: white;
+  font-weight: 400;
 }
 .flexbox {
   display: flex;
@@ -66,28 +79,33 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-.flexbox-space-between {
+.f-space-between {
   justify-content: space-between;
 }
-.fcolumn {
-  flex-direction: column;
-}
-.fcol-auto {
-    flex-basis: auto;
-}
+
 .flexbox__container {
   display: flex;
   flex-wrap: wrap;
   min-height: 4rem;
 }
-.flexbox__item:nth-child(1), .flexbox__item:nth-child(2) {
-  display: flex;
-  align-items: start;
-}
-.flexbox__item:nth-child(1) {
-  flex-basis: 30%;
-}
-.flexbox__item:nth-child(2) {
+.fbasis-70 {
   flex-basis: 70%;
 }
-  
+.flexbox__item:nth-child(1) {
+  flex-basis: 100%;
+}
+.flexbox__item:nth-child(2) {
+  flex-basis: 100%;
+}
+.flexbox__item:nth-child(3) {
+  flex-basis: 32.5%;
+}
+.flexbox__item:nth-child(4) {
+  flex-basis: 100%;
+}
+.flexbox__item:nth-child(1), .flexbox__item:nth-child(2), .flexbox__item:nth-child(3) {
+  font-size: .8rem;
+}
+.padding-bottom {
+  padding-bottom: .5rem;
+}
