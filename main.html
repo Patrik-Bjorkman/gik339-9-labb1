@@ -9,16 +9,17 @@
     <script src="main.js" defer></script>
 </head>
 <body>
+  <main>
     <h1>Labb 1 - Grupp 9</h1>
     <div class="container border-rounded">
-      <div class="flexbox flexbox-space-between">
-        <div class="flexbox thirty fcolumn fcol-auto max-width-15">
+      <div class="flexbox__container flexbox-space-between">
+        <div class="flexbox flexbox__item thirty fcolumn fcol-auto max-width-15">
           <label for="color">Färg</label>
           <label for="content">Innehåll</label>
           <label for="divStyle">Stil på box</label>
           <button id="button" class="button border-rounded thirty border-color">Ta bort</button>
         </div>
-        <div class="flexbox fcolumn">
+        <div class="flexbox flexbox__item fcolumn">
           <input type="text" name="color" id="color" class="textfield border-rounded fullsize">
           <input type="text" name="content" id="content" class="textfield border-rounded fullsize">
           <input type="checkbox" name="divStyle" id="divStyle" class="checkbox">
@@ -26,5 +27,6 @@
       </div>
       <div class="empty-div" id="btn">Div som egentligen ska vara tom</div>
     </div>
+  </main>
 </body>
 </html>
