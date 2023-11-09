@@ -13,17 +13,24 @@ button.addEventListener('click', function() {       // Add a click event listene
         emptyDiv.style.display = 'none';
     }
 });
+
 colorInput.addEventListener('input', function() { // Add an input event listener to the input element
-    emptyDiv.style.backgroundColor = colorInput.value; // Set the background color of the div element to the value of the input element
+    if (divStyleCheckbox.checked) { // Check if the checkbox is checked
+        emptyDiv.style.backgroundColor = colorInput.value; // Set the background color of the div element to the value of the input element
+    }
 });
-contentInput.addEventListener('input', function() { // Add an input event listener to the input element
-    emptyDiv.textContent = contentInput.value; // Set the text content of the div element to the value of the input element
-});
+
 divStyleCheckbox.addEventListener('change', function() { // Add a change event listener to the input element
     if (divStyleCheckbox.checked) { // Check if the checkbox is checked
         emptyDiv.classList.add('border-rounded-05');
-        emptyDiv.style.backgroundColor = colorInput.value; // Set the background color of the div element to the value of the input element
+        emptyDiv.style.backgroundColor = colorInput.value;
+        emptyDiv.textContent = contentInput.value; // Set the background color of the div element to the value of the input element
     } else { // If the checkbox is not checked
         emptyDiv.classList.remove('border-rounded-05');
+        emptyDiv.style.backgroundColor = '';
+        emptyDiv.textContent = ''; // Set the background color of the div element to empty string
     }
 });
+// contentInput.addEventListener('input', function() { // Add an input event listener to the input element
+//     emptyDiv.textContent = contentInput.value; // Set the text content of the div element to the value of the input element
+// });
