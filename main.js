@@ -2,29 +2,22 @@ const button = document.getElementById('button');
 const emptyDiv = document.getElementById('emptyDiv');
 const colorInput = document.getElementById('color');
 const contentInput = document.getElementById('content');
-const divStyleCheckbox = document.getElementById('divStyle');
+// const divStyleCheckbox = document.getElementById('divStyle');
 const checkbox = document.querySelector('input[type="checkbox"]');
 const textFields = document.getElementsByClassName('textfield');
-
-button.addEventListener(
-    'click', 
-    () => {
-        emptyDiv.remove();
-    }
-);
 
 colorInput.addEventListener(
     'input', 
     function() {
-        if (divStyleCheckbox.checked) {
+        if (checkbox.checked) {
             emptyDiv.style.backgroundColor = colorInput.value;}
     }
 );
 
-divStyleCheckbox.addEventListener(
+checkbox.addEventListener(
     'change', 
     function() {
-        if (divStyleCheckbox.checked) {
+        if (checkbox.checked) {
             emptyDiv.style.backgroundColor = colorInput.value;
             emptyDiv.textContent = contentInput.value;
         } else {
@@ -44,3 +37,5 @@ for (let i = 0; i < textFields.length; i++) {
         }
     );
 }
+
+button.addEventListener('click', () => emptyDiv.remove());
