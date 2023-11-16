@@ -16,7 +16,6 @@ main {
 *::before {
     box-sizing: border-box;
 }
-
 .container {
   width: 50%;
   background: #EFEFEF;
@@ -30,21 +29,17 @@ main {
 }
 .border-color {
   border: .01rem solid black;
-}
-  
+}  
 .textfield {
   border: .1rem solid #c1c0c0;
 }
-  
 .checkbox {
   margin-bottom: 0rem;
 }
-  
 .button {
   background-color: hsl(261, 24%, 84%);
   font-size: .7rem;
   padding: .3rem 1.8rem;
-  /* background-color: #ddd; */
   cursor: pointer;
 }
 .border-rounded-05 {
@@ -56,7 +51,6 @@ main {
 .button:hover {
   background-color: #ccc;
 }
-  
 .empty-div {
   font-size: 1rem;
   border: .01rem solid #000;
