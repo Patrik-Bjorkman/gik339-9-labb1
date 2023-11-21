@@ -106,12 +106,3 @@ h1 {
 .padding-bottom {
   padding-bottom: .5rem;
 }
-.merry-christmas {
-  font-size: 9rem;
-  font-family: 'Great Vibes', cursive;
-  color: hsl(261, 24%, 84%);
-  letter-spacing: .3rem;
-}
-.text-border {
-  -webkit-text-stroke: .1rem black;
-}

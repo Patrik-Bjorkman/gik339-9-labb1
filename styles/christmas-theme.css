@@ -1,0 +1,111 @@
+/* Christmas Theme */
+.merry-christmas {
+    font-size: 9rem;
+    font-family: 'Great Vibes', cursive;
+    color: hsl(261, 24%, 84%);
+    letter-spacing: .3rem;
+    flex-direction: column;
+  }
+  .text-border {
+    -webkit-text-stroke: .1rem black;
+  }
+  .merry-p {
+    padding: 0;
+    margin-block-start: 3rem;
+    margin-block-end: 0rem;
+  }
+  
+  .tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-start: 2rem;
+  }
+  
+  .layer {
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 100px solid green;
+    margin-bottom: -50px; /* half of the border-bottom width */
+  }
+  
+  /* Adjust the size of each layer to be slightly smaller than the one below */
+  .layer:nth-child(1) {
+    border-left-width: 45px;
+    border-right-width: 45px;
+    border-bottom-width: 75px;
+    margin-bottom: -37px; /* half of the border-bottom width */
+  }
+  
+  .layer:nth-child(2) {
+    border-left-width: 50px;
+    border-right-width: 50px;
+    border-bottom-width: 85px;
+    margin-bottom: -42px; /* half of the border-bottom width */
+  }
+  
+  .layer:nth-child(3) {
+    border-left-width: 55px;
+    border-right-width: 55px;
+    border-bottom-width: 95px;
+    margin-bottom: -47px; /* half of the border-bottom width */
+  }
+  
+  .base {
+    width: 20px;
+    height: 50px;
+    background-color: brown;
+    margin-bottom: -25px; /* half of the height to overlap with the lowest tree layer */
+  }
+  .star {
+    position: relative;
+    display: block;
+    color: yellow;
+    margin-bottom: -20px; /* To overlap the top of the tree */
+  }
+  
+  .star:before, .star:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    color: yellow;
+  }
+  
+  /* Create the star using the clip-path property for a perfect star shape */
+  .star {
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background: currentColor;
+    width: 30px; /* Width of the star */
+    height: 30px; /* Height of the star */
+    line-height: 30px;
+    text-align: center;
+    margin-left: 0px; /* Half width to center it above the tree */
+  }
+  .christmas-border {
+    position: relative;
+    padding: 1rem; /* Adjust the padding as needed */
+    background: white; /* Your content background */
+    /* Other styles for your content */
+}
+
+.christmas-border:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1; /* Place the pseudo-element behind the content */
+    margin: -1rem; /* Negative margin equal to the desired border width */
+    background: repeating-linear-gradient(
+        45deg,
+        red,
+        red .5rem,
+        white .5rem,
+        white 1rem
+    );
+    border-radius: 1.5rem; /* Optional for rounded corners */
+}
