@@ -1,4 +1,5 @@
 /* Christmas Theme */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 .merry-christmas {
     font-size: 9rem;
     font-family: 'Great Vibes', cursive;
@@ -29,42 +30,42 @@
     border-left: 60px solid transparent;
     border-right: 60px solid transparent;
     border-bottom: 100px solid green;
-    margin-bottom: -50px; /* half of the border-bottom width */
+    margin-bottom: -50px;
   }
   
-  /* Adjust the size of each layer to be slightly smaller than the one below */
+
   .layer:nth-child(1) {
     border-left-width: 45px;
     border-right-width: 45px;
     border-bottom-width: 75px;
-    margin-bottom: -37px; /* half of the border-bottom width */
+    margin-bottom: -37px;
   }
   
   .layer:nth-child(2) {
     border-left-width: 50px;
     border-right-width: 50px;
     border-bottom-width: 85px;
-    margin-bottom: -42px; /* half of the border-bottom width */
+    margin-bottom: -42px;
   }
   
   .layer:nth-child(3) {
     border-left-width: 55px;
     border-right-width: 55px;
     border-bottom-width: 95px;
-    margin-bottom: -47px; /* half of the border-bottom width */
+    margin-bottom: -47px; 
   }
   
   .base {
     width: 20px;
     height: 50px;
     background-color: brown;
-    margin-bottom: -25px; /* half of the height to overlap with the lowest tree layer */
+    margin-bottom: -25px; 
   }
   .star {
     position: relative;
     display: block;
     color: yellow;
-    margin-bottom: -20px; /* To overlap the top of the tree */
+    margin-bottom: -20px;
   }
   
   .star:before, .star:after {
@@ -74,21 +75,21 @@
     color: yellow;
   }
   
-  /* Create the star using the clip-path property for a perfect star shape */
+
   .star {
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     background: currentColor;
-    width: 30px; /* Width of the star */
-    height: 30px; /* Height of the star */
+    width: 30px; 
+    height: 30px; 
     line-height: 30px;
     text-align: center;
-    margin-left: 0px; /* Half width to center it above the tree */
+    margin-left: 0px;
   }
   .christmas-border {
     position: relative;
-    padding: 1rem; /* Adjust the padding as needed */
-    background: white; /* Your content background */
-    /* Other styles for your content */
+    padding: 1rem; 
+    background: white; 
+    
 }
 
 .christmas-border:before {
@@ -98,8 +99,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: -1; /* Place the pseudo-element behind the content */
-    margin: -1rem; /* Negative margin equal to the desired border width */
+    z-index: -1;
+    margin: -1rem; 
     background: repeating-linear-gradient(
         45deg,
         red,
@@ -107,5 +108,5 @@
         white .5rem,
         white 1rem
     );
-    border-radius: 1.5rem; /* Optional for rounded corners */
+    border-radius: 1.5rem; 
 }
