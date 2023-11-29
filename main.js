@@ -3,6 +3,14 @@ const emptyDiv = document.getElementById('emptyDiv');
 const checkbox = document.querySelector('input[type="checkbox"]');
 const textFields = document.getElementsByClassName('textfield');
  
+function inputHandle(e) {
+    console.log(e.target);
+    if (e.target.name === 'content') { 
+        const contentText = e.target.value;
+        emptyDiv.innerHTML = contentText; 
+    }
+}
+
 checkbox.addEventListener(
     'change', function() {
         for (let textfield of textFields) {
@@ -13,16 +21,9 @@ checkbox.addEventListener(
     }
 );
 
-function inputHandle(e) {
-    console.log(e.target);
-    if (e.target.name === 'content') { 
-        const contentText = e.target.value;
-        emptyDiv.innerHTML = contentText; 
-    }
-}
 for (let textfield of textFields) {
     textfield.addEventListener(
-        'input', 
+        'keydown', 
         inputHandle
     );
 }
